@@ -1,12 +1,12 @@
 DROP TABLE IF EXISTS user;
 CREATE TABLE user (
-  `user_id` int auto_increment PRIMARY KEY COMMENT 'ÓÃ»§×ÔÔöID',
-  `user_name` varchar(16) UNIQUE NOT NULL COMMENT 'ÓÃ»§Ãû',
-  `password` varchar(16) NOT NULL COMMENT 'ÃÜÂë',
-  `name` varchar(50) NOT NULL COMMENT 'Ãû³Æ',
-  `create_user_id` varchar(16) NOT NULL COMMENT '´´½¨ÓÃ»§ID',
-  `create_user_name` varchar(16) NOT NULL COMMENT '´´½¨ÓÃ»§Ãû',
-  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '´´½¨Ê±¼ä',
-  `update_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '¸üĞÂÊ±¼ä'
-  `status` varchar(8) NOT NULL DEFAULT '1' COMMENT '×´Ì¬ Ê¹ÓÃ»¹ÊÇÎ´Ê¹ÓÃ 0:ÆôÓÃ 1:Í£ÓÃ'
+  `user_id` int auto_increment PRIMARY KEY COMMENT 'ç”¨æˆ·è‡ªå¢ID',
+  `user_name` varchar(16) UNIQUE NOT NULL COMMENT 'ç”¨æˆ·å',
+  `password` varchar(32) NOT NULL COMMENT 'å¯†ç ',
+  `name` varchar(50) NOT NULL COMMENT 'åç§°',
+  `create_user_id` varchar(16) NOT NULL COMMENT 'åˆ›å»ºç”¨æˆ·ID',
+  `create_user_name` varchar(16) NOT NULL COMMENT 'åˆ›å»ºç”¨æˆ·å',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'åˆ›å»ºæ—¶é—´',
+  `update_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'æ›´æ–°æ—¶é—´',
+  `status` varchar(8) NOT NULL DEFAULT '1' COMMENT 'çŠ¶æ€ ä½¿ç”¨è¿˜æ˜¯æœªä½¿ç”¨ 0:åœç”¨ 1:å¯ç”¨'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
