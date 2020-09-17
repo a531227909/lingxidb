@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS user_type;
 CREATE TABLE user_type (
   `user_type_id` int auto_increment PRIMARY KEY COMMENT '用户自增ID',
-  `user_type_name` varchar(16) NOT NULL COMMENT '用户名',
+  `user_type_name` varchar(16) NOT NULL COMMENT '用户类型(岗位)名称',
   `status` varchar(4) NOT NULL DEFAULT '1' COMMENT '状态 1:管理员 2:用户'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
