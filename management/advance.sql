@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS advance;
+CREATE TABLE advance (
+  `advanceId` int auto_increment PRIMARY KEY COMMENT '预支审核权限自增ID',
+  `name` varchar(16) COMMENT '用户ID',
+  `gender` varchar(16) COMMENT '部门ID',
+  `idCard` varchar(16) COMMENT '部门ID',
+  `phoneNum` varchar(16) COMMENT '部门ID',
+  `company_id` varchar(12) COMMENT '用工公司ID',
+  `company_full_name` varchar(32) COMMENT '用工公司名称',
+  `usingCompanyId` varchar(12) COMMENT '用工公司ID',
+  `usingCompanyName` varchar(32) COMMENT '用工公司名称',
+  `stationName` varchar(16) COMMENT '部门ID',
+  `workersPrice` varchar(16) COMMENT '部门ID',
+  `startJobTime` varchar(16) COMMENT '部门ID',
+  `advanceMoney` varchar(16) COMMENT '部门ID',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `advanceServiceCost` varchar(16) COMMENT '部门ID',
+  `status` varchar(16) COMMENT '部门ID',
+  `province_code` varchar(8) COMMENT '省级ID',
+  `province_name` varchar(8) COMMENT '省级名称',
+  `city_code` varchar(8) COMMENT '市级ID',
+  `city_name` varchar(8) COMMENT '市级名称',
+  `county_code` varchar(8) COMMENT '县级ID',
+  `county_name` varchar(8) COMMENT '县级名称',
+  `address` varchar(64) COMMENT '详细地址'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

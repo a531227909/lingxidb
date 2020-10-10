@@ -15,9 +15,12 @@ CREATE TABLE company (
   `county_name` varchar(8) NOT NULL COMMENT '县级名称',
   `address` varchar(64) NOT NULL COMMENT '详细地址',
   `company_profile` varchar(256) COMMENT '公司简介',
-  `company_business_license` varchar(128)  NOT NULL COMMENT '营业执照图片ID',
-  `company_logo` varchar(128) COMMENT '公司logo图片ID',
-  `company_pic` varchar(1024) COMMENT '营业照片图片ID',
+  `company_business_license` varchar(32) COMMENT '营业执照图片ID',
+  `company_logo` varchar(32) COMMENT '公司logo图片ID',
+  `company_pic` varchar(32) COMMENT '营业照片图片ID',
+  `company_type_id` varchar(32) NOT NULL COMMENT '公司类型ID',
+  `company_type_name` varchar(32) NOT NULL COMMENT '公司类型名称',
+  `parentId` varchar(32) NOT NULL COMMENT '上级公司ID -1:顶级',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
