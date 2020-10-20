@@ -10,9 +10,9 @@ CREATE TABLE work_review (
   `company_full_name` varchar(32) COMMENT '所属公司全称',
   `usingCompanyId` varchar(12) COMMENT '用工公司ID',
   `usingCompanyName` varchar(32) COMMENT '用工公司名称',
-  `reviewReason` varchar(12) COMMENT '审核原因',
-  `workAuditCurrentNode` varchar(12) COMMENT '当前申请权限节点编号',
+  `reviewReason` varchar(12) COMMENT '申请原因',
+  `workAuditCurrentNode` varchar(12) COMMENT '当前审核节点ID',
+  `workReviewStatus` varchar(4) NOT NULL DEFAULT '0' COMMENT '审核状态 审核还是未审核 0:未审核 1:审核中 2:审核完成',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `update_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  `workReviewStatus` varchar(4) NOT NULL DEFAULT '0' COMMENT '审核状态 审核还是未审核 0:未审核 1:审核完成'
+  `update_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
